@@ -1,6 +1,7 @@
+
+
 <template>
       <div >
-  
         <nuxt />
         <div class="navbar">  
           <ul>
@@ -33,8 +34,9 @@
 
 .navbar ul{
  overflow: hidden;
+ bottom: 0;
   position: fixed;
-  bottom: 0;
+  
   width: 100%;
   border-top: black solid 1px;
     
