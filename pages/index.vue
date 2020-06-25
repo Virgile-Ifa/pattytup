@@ -4,7 +4,7 @@
 <div>
   
   <div>
-  <p class="centre">logo</p>
+  <p class="centre">logo-image</p>
   <section class="media">
     <div class="media-left">
     <figure class="image is-128x128">

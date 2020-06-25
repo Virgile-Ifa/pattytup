@@ -1,12 +1,3 @@
-<<<<<<< Updated upstream
-
-
-<template>
-      <div >
-        <nuxt />
-        <div class="navbar">  
-          <ul>
-=======
 <template>
   <div class="content" id="anchor1">
 
@@ -16,7 +7,6 @@
         <a class="retour"><nuxt-link :to="{path: '/', hash: '#anchor1'}" class="button">^</nuxt-link></a>
         <div class="barnav">  
           <ul class="navicone">
->>>>>>> Stashed changes
             <li>
               <nuxt-link to="/">
               <i class="fa fa-home" aria-hidden="true"></i>
@@ -31,7 +21,7 @@
                <nuxt-link to="/">
               <i class="fa fa-book" aria-hidden="true"></i>
               </nuxt-link>
-            </li>
+            </li>  
             <li>
                <nuxt-link to="/">
               <i class="fa fa-address-card-o" aria-hidden="true"></i>
@@ -39,12 +29,10 @@
             </li>
           </ul>
           </div>
-      </div> 
+      
+  </div>
 </template>
 
-<<<<<<< Updated upstream
-<style>
-=======
 <style langue="css">
 
 body{
@@ -52,21 +40,17 @@ body{
   height: 10000px;
   }
 .barnav .navicone{
->>>>>>> Stashed changes
 
-.navbar ul{
- overflow: hidden;
- bottom: 0;
+  background-color: white;
   position: fixed;
-  
+  overflow: hidden;
+  bottom: 0;
   width: 100%;
   border-top: black solid 1px;
+  list-style-type: none;
     
 }
 
-<<<<<<< Updated upstream
-ul{ 
-=======
        .retour, .retour:visited{
          position: fixed;
          right: 5px;
@@ -93,12 +77,16 @@ ul{
 .navicone{ 
   margin-left: 0;
     height:25vh;
->>>>>>> Stashed changes
     padding: 5px;
     display: flex; 
     flex-direction : row; 
     justify-content: space-around; 
-};
-
+    
+    
+}
+ 
+.fa {
+    color: black;
+}
 
 </style>
