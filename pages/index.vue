@@ -12,7 +12,7 @@
         <div class="media-content">
           <h1 class="title centre">Pattytup <br> Tupperware et recettes</h1>
           <h2 class="centre">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat qui
+            Lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat qui
             nemo soluta laboriosam.
           </h2>
         </div>
