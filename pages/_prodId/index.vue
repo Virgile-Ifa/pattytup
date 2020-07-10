@@ -1,5 +1,5 @@
 <template>
-    <!-- recuperation id pour single page produit-->
+    <!-- recuperation id pour single page -->
 
     <div class="container" id="posts">
 

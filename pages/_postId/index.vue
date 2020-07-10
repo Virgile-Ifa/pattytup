@@ -1,5 +1,5 @@
 <template>
- <!-- recuperation id pour single page recette -->
+ <!-- recuperation id pour single page -->
    
             <div class="container"  id="posts">
         <div class="info-recipe">
@@ -61,10 +61,8 @@ export default {
 
 <style scoped>
 
-/* Page d'une recette */
-.container{
-   /* margin-top: 105rem; */
-}
+
+
 
 .post-thumbnail {
  
