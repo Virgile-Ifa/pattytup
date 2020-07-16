@@ -18,7 +18,7 @@
                     <div class="control has-icons-left has-icons-right">
                         <input class="input" type="text" placeholder="Votre nom" name="name">
                         <span class="icon is-small is-left">
-                            <i class="fas fa-user"></i>
+                            <i class="fa fa-user" aria-hidden="true"></i>
                         </span>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                     <p class="control has-icons-left has-icons-right">
                         <input class="input" type="email" placeholder="Votre email" name="_replyto">
                         <span class="icon is-small is-left">
-                            <i class="fas fa-envelope"></i>
+                           <i class="fa fa-envelope" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>

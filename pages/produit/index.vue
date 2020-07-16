@@ -179,4 +179,9 @@
     };
 }
 
+@media screen and (max-width: 1024px) {
+  .container {margin-bottom:15rem;}
+}
+
+
 </style>

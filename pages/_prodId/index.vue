@@ -1,22 +1,20 @@
 <template>
-    <!-- recuperation id pour single page -->
+ <!-- template single page d'un produit -->
 
-    <div class="container" id="posts">
+    <div class="container" id="prods"  v-editable="blokprod">
 
         <div class="info-page">
             <div class="column is-6-desktop is-12-mobile">
                 <div class="info">
-                    <div
-                        class="post-thumbnail infop-img"
+                    <div class="post-thumbnail infop-img"
                         :style="{backgroundImage: 'url(' + image +')'}"></div>
-                    <h3 class="infop-name">{{ title}}</h3>
+                    <h3 class="infop-name">{{ title }}</h3>
                     <p class="infop-price">
                         {{ prix }}</p>
                     <p class="infop-desc is-6-desktop is-12-mobile">
                         {{ description }}
                     </p>
-
-                </div>
+                     </div>
 
             </div>
         </div>
@@ -26,16 +24,15 @@
 </template>
 
 <script>
-    export default {
+  export default {
         asyncData(context) {
-            return context
-                .app
-                .$storyapi
-                .get('cdn/stories/produit/' + context.params.prodId, {version: 'draft'})
-                .then(res => {
-
+            return context.app.$storyapi.get("cdn/stories/produit/"+ context.params.prodId, {
+                version: 'draft'
+                }).then(res => {
+                    console.log(res.data);
                     return {
-                        image: res.data.story.content.photo_recette.filename,
+                        blokprod: res.data.story.content,
+                        image: res.data.story.content.image_produit.filename,
                         title: res.data.story.content.nom_produit,
                         prix: res.data.story.content.prix,
                         description: res.data.story.content.description_produit,
@@ -45,13 +42,10 @@
                 });
         }
     };
-</script>
+    </script>
 
 <style scoped="scoped">
-
-  
 /* Page d'un produit */
-
 .info-page {
     display: flex;
     justify-content: center;
@@ -65,34 +59,32 @@
     margin-right: auto;
 }
 
-
 .cat-product {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: bold;
     color: #6DB6CA;
     margin-top: 1%;
-}
+    }
 
-.infop-name, .infop-price {
-    font-family: 'Montserrat', sans-serif;
+
+    .infop-name, .infop-price {
+        font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: bolder;
     margin-top: 1%;
-    text-align: center;
-}
+      text-align: center;
+      }
 
 .infop-name {
     transition: 0.5s;
-}
+    }
 
-.infop-name:hover {
+    .infop-name:hover {
     color: #6DB6CA;
     transition: 0.5s;
-}
+    }
 
-.infop-desc {
-    text-align: justify;
+.infop-desc {text-align: justify;
 }
-
 </style>

@@ -1,7 +1,7 @@
 <template>
- <!-- recuperation id pour single page -->
+ <!-- template single page d'une recette -->
    
-            <div class="container"  id="posts">
+            <div class="container"  id="posts" v-editable="blok">
         <div class="info-recipe">
             <div class="info">
               <div class="post-thumbnail info-img-recipe" :style="{backgroundImage: 'url(' + image +')'}"></div>
@@ -9,15 +9,15 @@
             </div>
             <div class="columns info-head">
                 <div class="column is-2-desktop info-card">
-                    <img src="/assets/four.png" alt="icone" class="info-img">
+                    <img src="../../assets/four.png" alt="icone" class="info-img">
                      <p> {{ cuisson }}</p>
                 </div>
                 <div class="column is-2-desktop info-card">
-                    <img src="/assets/mixer.png" alt="icone" class="info-img">
+                    <img src="../../assets/mixer.png" alt="icone" class="info-img">
                    <p> {{ preparation }}</p>
                 </div>
                 <div class="column is-2-desktop info-card">
-                    <img src="/assets/toque.png" alt="icone" class="info-img">
+                    <img src="../../assets/toque.png" alt="icone" class="info-img">
                     <p> {{ difficulte }}</p>
                 </div>
             </div>
@@ -42,6 +42,7 @@ export default {
       }).then(res => {
        
         return {
+        blok: res.data.story.content,
         image: res.data.story.content.photo_recette.filename,
         title: res.data.story.content.nom_recette,
         etape: res.data.story.content.liste_etape,
@@ -133,6 +134,10 @@ export default {
         text-align: justify;
         padding: 5%;
     }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {margin-bottom:14rem;}
 }
 
 

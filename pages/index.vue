@@ -38,7 +38,7 @@
             </div>
             <div>
            
-            <nuxt-link to="./produit"><a class="btn-more">Découvrir plus</a></nuxt-link></div>
+            <nuxt-link to="/produit"><a class="btn-more">Découvrir plus</a></nuxt-link></div>
         </section>
         <!-- Section meilleures ventes -->
         <section>
@@ -64,7 +64,8 @@
                     <span class="price-product">15,00 €</span>
                 </div>
             </div>
-            <button class="btn-more">Découvrir plus</button>
+            <div>
+            <nuxt-link to="/produit"><a class="btn-more">Découvrir plus</a></nuxt-link></div>
         </section>
         <!-- Section denrières recettes -->
         <section>
@@ -96,7 +97,8 @@
                     </p>
                 </div>
             </div>
-            <button class="btn-more">Découvrir plus</button>
+          <div>
+            <nuxt-link to="/recette"><a class="btn-more">Découvrir plus</a></nuxt-link></div>
         </section>
         <!-- Section service Pattytup -->
         <section class="service">
@@ -119,6 +121,8 @@
                     <p class="serv-desc">Lorem ipsum dolor sit amet, consectetur.</p>
                 </div>
             </div>
+            <div>
+            <nuxt-link to="/contact"><a class="btn-more">Nous contacter</a></nuxt-link></div>
         </section>
     </div>
 </template>
@@ -135,7 +139,7 @@
 
 .container
 {
- z-index: -1;}
+ z-index: 1;}
 
 
 /* HEADER */
@@ -378,7 +382,7 @@ section {
 @media screen and (max-width: 1024px){
 
 .service{
-  margin-bottom: 15rem;
+  margin-bottom: 16rem;
 }
 }
 </style>

@@ -4,6 +4,7 @@
     <section>
 
     
+ 
         <div class="recipe-section">
             <h1 class="section-title">—— Découvrez nos recettes ——</h1>
         </div>
@@ -88,6 +89,10 @@
    
 }
 
+@media screen and (min-width: 1024px) {
+  .container {margin-top:150px;}
+}
+
 
 @media screen and ( min-width: 1024px){
     /* .container{padding-top: 3.5rem;} */
@@ -95,5 +100,10 @@
         flex-direction: row;
     };
 }
+
+@media screen and (max-width: 1024px) {
+  .container {margin-bottom:15rem;}
+}
+
 
 </style>
